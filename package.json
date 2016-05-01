@@ -1,0 +1,22 @@
+{
+  "name": "fcc_timestamp",
+  "version": "1.0.0",
+  "description": "Timestamp Microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonsandg/fcc_timestamp.git"
+  },
+  "author": "Jonathan Sandgren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonsandg/fcc_timestamp/issues"
+  },
+  "homepage": "https://github.com/jonsandg/fcc_timestamp#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
