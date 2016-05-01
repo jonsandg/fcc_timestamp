@@ -6,6 +6,8 @@ var months = ["January", "February", "March", "April", "May", "June",
 
 app.set('json spaces', 2);
 
+app.set('port', (process.env.PORT || 5000));
+
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
@@ -29,7 +31,7 @@ app.get('/:timestamp', function(req, res){
 
 });
 
-app.listen(8080, function(){
-    console.log('Server running on 8080');
+app.listen(app.get('port'), function(){
+    console.log('Server running on ' + app.get('port'));
 
 })
