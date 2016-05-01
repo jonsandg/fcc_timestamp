@@ -17,12 +17,11 @@ app.get('/:timestamp', function(req, res){
     else
         var date = new Date(parseInt(timestamp)*1000);
     
-    if(date && date > 0){
-        var responseObj = {
+    if(date && date > 0){ 
+        res.json({
             unix : date.getTime()/1000,
             natural: months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear()
-        }
-        res.json(responseObj);
+        });
     } else {
         res.json({unix: null, natural: null});
     }
@@ -32,9 +31,5 @@ app.get('/:timestamp', function(req, res){
 
 app.listen(8080, function(){
     console.log('Server running on 8080');
-    
-    console.log((new Date('2012-08-09')).getTime());
-    console.log((new Date('abc')).getTime());
-    console.log((new Date('2012-12-09')).getTime());
-    console.log((new Date(1355011200000)).getTime());
+
 })
