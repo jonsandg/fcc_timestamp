@@ -32,9 +32,5 @@ app.get('/:timestamp', function(req, res){
 
 app.listen(8080, function(){
     console.log('Server running on 8080');
-    
-    console.log((new Date('2012-08-09')).getTime());
-    console.log((new Date('abc')).getTime());
-    console.log((new Date('2012-12-09')).getTime());
-    console.log((new Date(1355011200000)).getTime());
+
 })
